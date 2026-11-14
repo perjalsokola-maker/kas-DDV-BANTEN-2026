@@ -1,0 +1,215 @@
+<!DOCTYPE html><html lang="id"><head><meta charset="utf-8"><title>Kas DDV Banten 2026</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--lime:#C8F25A;--mint:#EAFBD9;--ink:#14160f;--mut:#6b7062;--bg:#eef0ea;--card:#fff;--red:#c2410c;--grn:#2f7a12;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#1b1e17}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);font:15px/1.4 'Space Grotesk',system-ui,sans-serif;color:var(--ink)}
+.stage{display:flex;flex-wrap:wrap;gap:28px;justify-content:center;padding:28px 12px}
+.phone{width:390px;max-width:100%;height:800px;border-radius:44px;border:8px solid #1d1a24;background:var(--mint);overflow:hidden;position:relative;display:flex;flex-direction:column}
+.scr{flex:1;overflow-y:auto;padding:18px 16px 96px;scrollbar-width:none}
+button{font:inherit;color:inherit;cursor:pointer;border:0;background:none;min-height:44px}
+button:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.pill{border-radius:99px;background:#fff;padding:0 16px;min-height:44px;white-space:nowrap}.pill.on{background:var(--lime);font-weight:700}
+.row{display:flex;align-items:center;gap:10px}.sb{justify-content:space-between}.mut{color:var(--mut);font-size:12px}
+.chips{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:2px 0}
+.ob{background:var(--lime)}.ob .scr{display:flex;flex-direction:column;padding-bottom:20px}
+.ob h1{font-size:38px;line-height:1.05;margin:auto 0 12px}
+.go{width:64px;height:64px;border-radius:50%;background:var(--ink);color:#fff;font-size:26px}
+.card{background:var(--ink);color:#fff;border-radius:28px;padding:20px;margin:16px 0;position:relative;overflow:hidden;background-image:repeating-linear-gradient(135deg,#ffffff0a 0 2px,transparent 2px 14px)}
+.card .big{font-size:36px;font-weight:700;margin:6px 0}.card .set{position:absolute;right:14px;top:14px;background:var(--lime);color:var(--ink);border-radius:99px;padding:0 14px;min-height:44px;font-weight:700}
+.acts{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;text-align:center;font-size:13px}
+.acts b{display:grid;place-items:center;width:62px;height:62px;border-radius:50%;background:#fff;margin:0 auto 4px;font-size:22px}.acts div:last-child b{background:var(--lime)}
+h3{margin:18px 0 8px;font-size:17px}
+.list{background:#fff;border-radius:26px;padding:6px 14px}
+.tx{display:flex;gap:12px;align-items:center;width:100%;text-align:left;padding:10px 0;border-bottom:1px solid #0001}.tx:last-child{border:0}
+.ic{flex:none;width:40px;height:40px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font-size:12px;font-weight:700}
+.tx .t{flex:1;min-width:0}.tx .t b{display:block;font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.out{color:var(--red);font-weight:700}.in{color:var(--grn);font-weight:700}
+.tag{display:inline-block;border-radius:99px;padding:0 8px;font-size:11px;background:var(--mint);margin-left:6px}.tag.p{background:#ffe9a8}
+.nav{position:absolute;left:50%;bottom:16px;transform:translateX(-50%);background:var(--ink);border-radius:99px;padding:6px;display:flex;gap:6px}
+.nav button{width:52px;height:52px;border-radius:50%;color:#fff;font-size:18px}.nav .c{background:var(--lime);color:var(--ink)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.k{border-radius:26px;padding:14px;min-height:190px}.k.l{background:var(--lime)}.k.d{background:var(--ink);color:#fff}
+.k .n{font-size:22px;font-weight:700;margin:6px 0}
+.cb{height:6px;border-radius:9px;background:#ffffff30;margin:3px 0 7px}.cb i{display:block;height:100%;border-radius:9px;background:var(--lime)}
+.chart{background:#fff;border-radius:26px;padding:14px;margin-top:10px}
+.bars{display:flex;align-items:flex-end;gap:6px;height:170px;margin-top:12px;position:relative}
+.bars button{flex:1;display:flex;align-items:flex-end;gap:2px;height:100%;padding:0;border-radius:8px}.bars button.on{background:var(--mint)}
+.bars i{flex:1;border-radius:7px 7px 3px 3px;min-height:2px}.bars .a{background:var(--lime);border:1px solid #14160f33}.bars .b{background:var(--ink)}
+.lbl{display:flex;gap:6px}.lbl span{flex:1;text-align:center;font-size:12px;color:var(--mut)}
+.tip{position:absolute;top:-4px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;border-radius:10px;padding:2px 10px;font-size:12px;white-space:nowrap;pointer-events:none}
+.sheet{position:absolute;inset:auto 0 0 0;background:#fff;border-radius:28px 28px 0 0;padding:20px 20px 28px;box-shadow:0 -10px 40px #0004;transform:translateY(110%);transition:transform .25s;z-index:5}
+.sheet.show{transform:none}.sheet dl{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;margin:12px 0}.sheet dt{color:var(--mut)}.sheet dd{margin:0;text-align:right}
+@media(prefers-reduced-motion:reduce){.sheet{transition:none}}
+</style></head><body><main class="stage">
+<section class="phone ob" aria-label="Pembuka"><div class="scr">
+<div class="row"><b>DDV Banten</b></div>
+<svg viewBox="0 0 300 200" width="100%" role="img" aria-label="Ilustrasi relawan dan dompet" style="margin-top:20px"><circle cx="150" cy="95" r="80" fill="#a9d33f"/><rect x="70" y="95" width="160" height="85" rx="18" fill="#fff" stroke="#14160f" stroke-width="3" stroke-dasharray="7 5"/><circle cx="205" cy="125" r="14" fill="#C8F25A" stroke="#14160f" stroke-width="3"/><circle cx="150" cy="55" r="22" fill="#fff" stroke="#14160f" stroke-width="3"/><path d="M95 60l-20-25M150 77v25" stroke="#14160f" stroke-width="3" fill="none"/></svg>
+<h1>Kas relawan, terbuka untuk semua</h1><p>Catat, pantau, dan reimburse kegiatan DDV Banten 2026 dengan mudah.</p>
+<div class="row sb" style="margin-top:12px"><button onclick="go('home')">Lewati</button><button class="go" aria-label="Mulai" onclick="go('home')">↗</button></div></div></section>
+<section class="phone" id="home" aria-label="Beranda"><div class="scr">
+<div class="row sb"><div class="row"><span class="ic">PZ</span><div><div class="mut">Penanggung jawab: Pauzan</div><b>Selamat datang kembali</b></div></div><button class="pill" aria-label="Notifikasi" id="bell">🔔</button></div>
+<div class="card"><button class="set" id="pend">Atur anggaran</button><div class="mut" style="color:#fff9">Kas DDV Banten 2026</div><div class="big" id="bal"></div><div class="mut" style="color:#fffa">Nurul Amanah · PIC DDV Banten</div><div class="mut" id="chk" style="color:var(--lime);margin-top:10px"></div></div>
+<div class="acts"><div><b>＋</b>Catat</div><div><b>⇄</b>Reimburse</div><div><b>▦</b>Kegiatan</div><div><b>⋯</b>Lainnya</div></div>
+<h3>Aktivitas terbaru</h3><div class="chips" id="f1"></div><div class="chips" id="f2" style="margin:6px 0 10px"></div><div class="list" id="act"></div>
+</div><nav class="nav" aria-label="Navigasi"><button aria-label="Statistik" onclick="go('stat')">▤</button><button class="c" aria-label="Catat">＋</button><button aria-label="Menu">⋮</button></nav>
+<div class="sheet" id="sh" role="dialog" aria-label="Detail transaksi"></div></section>
+<section class="phone" id="stat" aria-label="Statistik"><div class="scr">
+<div class="row sb"><button class="pill" aria-label="Kembali" onclick="go('home')">←</button><b style="font-size:18px">Statistik</b><span style="width:44px"></span></div>
+<div class="chips" id="tabs" style="margin:14px 0"></div>
+<div class="two"><div class="k l"><div class="mut" style="color:#14160f99">Pemasukan</div><div class="n" id="kin"></div><p class="mut" id="kd" style="color:#14160fcc"></p></div>
+<div class="k d"><div class="mut" style="color:#fff9">Pengeluaran</div><div class="n" id="kout"></div><div id="cats"></div></div></div>
+<div class="chart"><div class="row sb"><b>Ringkasan</b><span class="mut">Total saldo <b id="bal2"></b></span></div>
+<div class="mut" style="margin-top:4px">Hijau: pemasukan · Hitam: pengeluaran</div><div class="bars" id="bars"></div><div class="lbl" id="lbl"></div></div>
+<h3>Piutang reimburse</h3><div class="list" id="pi"></div></div></section>
+</main><script>
+const RAW=`2404|Dana dari Teh Nurul|500000|0|_|M
+2404|Pengembalian dana Farha yang minus|0|43000|_|F
+2504|Makan siang 7 orang, wawancara oprec|0|84000|pu|K
+2504|Snack 7 orang, wawancara oprec|0|20000|pu|K
+2604|Makan siang 5 relawan, wawancara|0|61000|pu|K
+2604|Snack 5 relawan, wawancara|0|30000|pu|K
+0105|Balon 10 pcs, first meet|0|10000|pu|P
+0205|Dana dari Teh Nurul|500000|0|_|M
+0205|Snack first meet|0|50000|pu|K
+0205|Makan siang 15 relawan, first meet|0|195000|pu|K
+0205|Makan siang 8 relawan, first meet|0|104000|pu|K
+1505|Buku absensi relawan|0|20000|pu|A
+1505|Lem tembak 18 pcs, kostum|0|30000|pu|P
+1505|Kerudung pashmina 3 pcs, kostum|0|105000|pu|P
+1505|Pengembalian reimburse dari dana upgrading|135000|0|_|M
+1505|Snack rapat THK|0|70000|s|K
+1805|Nota dan kuitansi|0|9000|s|A
+1805|CapCut Pro 1 bulan|0|10000|s|L
+2205|Pemasukan sisa dana upgrading|1124500|0|_|M
+2405|Snack rapat THK|0|30000|s|K
+2805|Snack persiapan THK|0|30000|s|K
+1605|TF pegangan Jeje, live THK|0|700000|_|F
+2205|TF pegangan Jeje, live THK tahap 2|0|500000|_|F
+1106|Reimburse agenda live THK dari Teh Nurul|762500|0|_|M
+1106|Reimburse persiapan THK dari Teh Nurul|149000|0|_|M
+1106|Sisa kemasan sedekah daging|170070|0|_|M
+1106|Sisa uang kurban asik dari Ojan|132710|0|_|M
+1306|CapCut Pro 1 bulan, 2 device|0|55000|rr|L
+1506|Dana bazar baju kurban asik|340000|0|_|M
+1806|2 paket buku TBM|0|206522|rr|P
+1806|Pompa air TBM|0|25999|rr|P
+1806|Metode pembelajaran TBM 5 pcs|0|18994|rr|A
+1906|Papan tulis 3 pcs TBM|0|126391|rr|P
+1906|Pulpen Joyko TBM|0|26632|rr|A
+1906|Refil tinta spidol 2 pcs TBM|0|35735|rr|A
+1906|Pensil Joyko TBM|0|10912|rr|A
+2106|Snack bincang relawan|0|35000|rr|K
+2106|Makan siang 2 relawan setelah TBM|0|26000|rr|K
+2306|Nametag 100 pcs TBM|0|126660|rr|A
+2606|Snack rapat oprec kakak pengajar|0|30000|rr|K
+2606|FC kebutuhan oprec kakak pengajar|0|17500|rr|A
+2706|Air gunung gelas 1 dus|0|21500|rr|K
+2706|Makan siang 4 relawan, wawancara pengajar|0|52000|rr|K
+2806|Makan siang 4 relawan, wawancara hari 2|0|52000|rr|K
+2806|Snack rapat fidyah|0|30000|rr|K
+3006|Biaya admin notifikasi SMS|0|7500|rr|L
+0207|Snack rapat kegiatan fidyah|0|30000|rr|K
+0307|FC kebutuhan first meet kakak pengajar|0|19000|rr|A
+0307|Air minum galon|0|8500|rr|K
+0407|Snack first meet kakak pengajar|0|50000|rr|K
+0407|Makan siang 14 relawan, first meet pengajar|0|182000|rr|K
+0407|Makan siang 1 relawan, first meet pengajar|0|14000|rr|K
+0807|Snack rapat fidyah|0|30500|rt|K
+0807|Dana reward lomba kurban asik tanpa sampah plastik|1000000|0|_|M
+0907|Konsumsi 2 relawan, survey fidyah|0|30500|rt|K
+1307|CapCut Pro 3 device|0|55000|rt|L
+1407|Reimburse dana rapat fidyah dan tanam pohon|30000|0|_|M
+2007|Dana TF sisa penanaman pohon|1063500|0|_|M
+2107|Reimburse talangan perlengkapan TBM|1207845|0|_|M
+2207|Reimburse dana sertijab DDV 2026|1910000|0|_|M
+2807|Biaya admin notifikasi SMS|0|3000|_|L
+0108|Snack rapat kakak pengajar|0|30500|pm|K
+0108|FC materi pembelajaran dan gunting kuku|0|30500|pm|A
+0808|Briefing kakak pengajar TBM roadshow Tegal Maja|0|30000|pm|K
+2808|Tabung gas untuk sekre DDV|0|230000|_|P
+0109|Biaya admin notifikasi SMS|0|3750|_|L
+0409|Kertas kado dan tumbler, best volunteer|0|81000|_|P
+0509|Konsumsi bonding relawan|0|64500|_|K
+0509|Admin pemindahan rekening|0|2000|_|L
+0509|Gula putih 1/4|0|5000|_|K
+0709|CapCut Pro sebulan|0|27000|_|L
+1109|Snack rapat penanaman mangrove|0|30000|_|K
+1209|Snack bonding relawan|0|31000|_|K
+1209|Snack 2 pack untuk TBM|0|19500|rr|K
+1209|Print pembelajaran 24 pcs TBM|0|5000|rr|A
+1209|Snack hadiah kakak pengajar 2 pack|0|18000|rr|K
+1309|Reimburse persiapan TBM|42500|0|_|M
+1909|Snack rapat mangrove|0|30000|pm|K
+2409|Gosend rompi dari Farha|0|14000|_|T
+2409|Makan siang 3 relawan, survey mangrove|0|36000|pm|K
+2509|Air galon isi ulang, campaign Satu Asa|0|3000|_|K
+2509|Baterai ABC, campaign Satu Asa|0|15000|_|P
+2509|Mini gift campaign Satu Asa|0|35000|_|P
+2509|Karton, pita, sticky note campaign|0|39000|_|A
+2509|FC gambar campaign|0|20000|_|A
+2509|Cetak print A3 campaign|0|157500|_|A
+2509|Maxim|0|10000|_|T
+2609|Print kebutuhan TBM|0|3000|rr|A
+2609|Konsumsi rapat campaign Satu Asa|0|20000|_|K
+2609|Doubletip campaign|0|20000|_|P
+2609|Mini gift campaign|0|30000|_|P
+2609|Gorengan persiapan campaign|0|20000|_|K
+2609|Air minum 1 dus|0|22000|_|K
+2609|Print kegiatan campaign|0|11000|_|A
+2709|E-toll campaign Satu Asa|0|38000|_|T
+2709|Bensin transport campaign|0|100000|_|T
+2709|Sarapan driver campaign|0|15000|_|K
+2709|Roti sarapan relawan|0|32000|_|K
+2709|Makan siang 11 relawan, campaign Satu Asa|0|165000|_|K
+2709|Pembayaran driver campaign Satu Asa|0|100000|_|T
+2809|Reimburse print pembelajaran TBM|3000|0|_|M
+2909|Makan siang kegiatan donasi Satu Asa|0|21000|_|K
+0210|Konsumsi rapat penanaman mangrove|0|30000|pc|K
+0310|TF ke Windy, keperluan tanam mangrove|0|2000000|pc|F
+0610|Reimburse Teh Nurul, konsumsi kegiatan mangrove|0|43500|pc|K
+1110|ID card relawan DDV 2026, 27 paket|0|192102|pm|A
+1310|Print dan stiker T&J, side event|0|21000|pd|A
+1310|Sticky note 2 pcs|0|8000|pd|A
+1310|Laundry rompi DDV|0|24000|pm|P
+1510|Karung goni 2 pcs, kegiatan PRB|0|20000|pd|P
+1510|Bensin mobil DD Banten, acara PRB|0|100000|pd|T
+1510|Bensin Pertamax, acara PRB|0|20000|pd|T
+1510|Gorengan acara PRB|0|20000|pd|K
+3010|Konsumsi rapat Siaga Bumi|0|40000|_|K`,CAT={K:'Konsumsi',A:'ATK & Cetak',T:'Transport',F:'Transfer Dana',L:'Langganan & Admin',P:'Perlengkapan',M:'Pemasukan'};
+const SRC={u:'Umum',m:'Mangrove',d:'DMC',c:'Pusat & Cabang'},MN=['','Jan','Feb','Mar','Apr','Mei','Jun','Jul','Agu','Sep','Okt'];
+const R$=n=>'Rp'+Math.round(n).toLocaleString('id-ID').replace(/,/g,'.');
+let b=0;const T=RAW.trim().split('\n').map(l=>{const p=l.split('|');const i=+p[2],o=+p[3];b+=i-o;const s=p[4];
+return{d:p[0].slice(0,2),m:+p[0].slice(2),t:p[1],i,o,bal:b,c:p[5],st:s[0]=='p'?{k:'p',l:'Proses reimburse '+SRC[s[1]]}:s=='s'?{k:'s',l:'Sudah kembali (THK)'}:s[0]=='r'?{k:'r',l:'Reimburse '+(s[1]=='r'?'RM':'Tanam Pohon')}:null}});
+const $=id=>document.getElementById(id),go=id=>$(id).scrollIntoView({behavior:'smooth',block:'center'});
+const sum=(a,f)=>a.reduce((x,y)=>x+f(y),0);
+const TI=sum(T,x=>x.i),TO=sum(T,x=>x.o);
+$('bal').textContent=$('bal2').textContent=R$(b);
+$('chk').textContent=`Cocok dengan laporan: masuk ${R$(TI)} − keluar ${R$(TO)}`;
+let fc='',fp=false;
+function chips(el,items,cur,fn){el.innerHTML='';items.forEach(([v,l])=>{const x=document.createElement('button');x.className='pill'+(v===cur?' on':'');x.textContent=l;x.onclick=()=>fn(v);el.append(x)})}
+function act(){chips($('f1'),[['','Semua'],...Object.entries(CAT)],fc,v=>{fc=v;act()});chips($('f2'),[[false,'Semua status'],[true,'Belum kembali']],fp,v=>{fp=v;act()});
+const L=T.filter(x=>(!fc||x.c==fc)&&(!fp||x.st&&x.st.k=='p')).slice(-8).reverse();
+$('act').innerHTML=L.length?'':'<p class="mut">Tidak ada transaksi untuk filter ini.</p>';
+L.forEach(x=>{const e=document.createElement('button');e.className='tx';
+e.innerHTML=`<span class="ic">${CAT[x.c].slice(0,2)}</span><span class="t"><b>${x.t}</b><span class="mut">${x.d} ${MN[x.m]} 2026</span>${x.st&&x.st.k=='p'?'<span class="tag p">Proses</span>':''}</span><span class="${x.i?'in':'out'}">${x.i?'+'+R$(x.i):'−'+R$(x.o)}</span>`;
+e.onclick=()=>{$('sh').innerHTML=`<b style="font-size:18px">${x.t}</b><dl><dt>Tanggal</dt><dd>${x.d} ${MN[x.m]} 2026</dd><dt>Kategori</dt><dd>${CAT[x.c]}</dd><dt>Nominal</dt><dd class="${x.i?'in':'out'}">${x.i?'+'+R$(x.i):'−'+R$(x.o)}</dd><dt>Saldo setelahnya</dt><dd>${R$(x.bal)}</dd><dt>Status</dt><dd>${x.st?x.st.l:'Kas murni / belum ada status'}</dd></dl><button class="pill on" style="width:100%" onclick="$('sh').classList.remove('show')">Tutup</button>`;$('sh').classList.add('show')};$('act').append(e)})}
+const P={};T.forEach(x=>{if(x.st&&x.st.k=='p')P[x.st.l.slice(17)]=(P[x.st.l.slice(17)]||0)+x.o});
+const PT=sum(Object.values(P),x=>x);
+$('pi').innerHTML=Object.entries(P).map(([k,v])=>`<div class="tx"><span class="t"><b>${k}</b></span><b>${R$(v)}</b></div>`).join('')+`<div class="tx"><span class="t"><b>Total belum kembali</b></span><b class="out">${R$(PT)}</b></div>`;
+$('pend').onclick=()=>{fp=true;act();go('home')};
+let sel=0;
+function stat(){const ms=[4,5,6,7,8,9,10];chips($('tabs'),[[0,'Total'],...ms.map(m=>[m,MN[m]])],sel,v=>{sel=v;stat()});
+const A=sel?T.filter(x=>x.m==sel):T,I=sum(A,x=>x.i),O=sum(A,x=>x.o);
+$('kin').textContent=R$(I);$('kout').textContent=R$(O);
+const pm=sel?sum(T.filter(x=>x.m==sel-1),x=>x.i):0;
+$('kd').textContent=!sel?`Selama April–Oktober 2026, dari ${T.filter(x=>x.i).length} pemasukan.`:pm?`${I>=pm?'Naik':'Turun'} ${Math.abs(Math.round((I-pm)/pm*100))}% dari ${MN[sel-1]}.`:`Pemasukan ${MN[sel-1]} Rp0, belum ada pembanding.`;
+const cs={};A.filter(x=>x.o).forEach(x=>cs[x.c]=(cs[x.c]||0)+x.o);
+$('cats').innerHTML=Object.entries(cs).sort((a,b)=>b[1]-a[1]).slice(0,4).map(([k,v])=>`<div class="mut" style="color:#fffc">${CAT[k]} ${Math.round(v/O*100)}%</div><div class="cb"><i style="width:${v/O*100}%"></i></div>`).join('');
+const D=ms.map(m=>({m,i:sum(T.filter(x=>x.m==m),x=>x.i),o:sum(T.filter(x=>x.m==m),x=>x.o)})),mx=Math.max(...D.flatMap(x=>[x.i,x.o]));
+$('bars').innerHTML=D.map(x=>`<button class="${x.m==sel?'on':''}" aria-label="${MN[x.m]}: masuk ${R$(x.i)}, keluar ${R$(x.o)}" data-m="${x.m}"><i class="a" style="height:${x.i/mx*100}%"></i><i class="b" style="height:${x.o/mx*100}%"></i></button>`).join('');
+$('lbl').innerHTML=D.map(x=>`<span>${MN[x.m]}</span>`).join('');
+$('bars').querySelectorAll('button').forEach((e,k)=>e.onclick=()=>{sel=D[k].m;stat();const t=document.createElement('div');t.className='tip';t.textContent=`${MN[sel]}: −${R$(D[k].o)}`;$('bars').append(t)})}
+act();stat();
+</script></body></html>

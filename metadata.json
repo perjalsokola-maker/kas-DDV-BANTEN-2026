@@ -1,0 +1,6 @@
+{
+  "name": "Kas DDV Banten 2026",
+  "description": "Aplikasi pencatatan, pemantauan saldo, statistik, dan pelacakan reimburse kas relawan DDV Banten 2026.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
